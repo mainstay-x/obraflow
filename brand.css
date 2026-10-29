@@ -1,0 +1,106 @@
+/* Identidade A&M: superfícies claras, grafite e geometria da marca. */
+:root {
+  --ink: #252627;
+  --muted: #72716d;
+  --muted-2: #97958f;
+  --primary: #292b2c;
+  --primary-2: #494b4c;
+  --primary-soft: #eeede9;
+  --tech: #58564f;
+  --orange: #ad8a55;
+  --orange-soft: #f5eee3;
+  --bg: #f4f3ef;
+  --surface: #faf9f6;
+  --line: #e3e1db;
+  --line-strong: #cbc8c0;
+  --shadow: 0 5px 22px rgba(35, 34, 30, .035);
+  --radius: 5px;
+}
+body { font-family: "Inter", sans-serif; }
+h1, h2, h3, .brand-copy, .kpi-value { font-family: "Space Grotesk", sans-serif; }
+button, input, select, textarea { border-radius: 4px; }
+:focus-visible { outline: 2px solid #ad8a55; outline-offset: 4px; }
+.login-screen { background: #faf9f6; grid-template-columns: 1.08fr 1fr; }
+.login-panel { padding: clamp(36px, 5vw, 80px); background: #252728; color: #fff; }
+.login-panel::before { width: 95%; height: 85%; inset: auto -18% -12% auto; border: 0; border-radius: 0; background: url("assets/am-pattern.svg") center / contain no-repeat; opacity: .045; filter: invert(1); }
+.login-panel::after { width: auto; height: auto; inset: 24px; border: 1px solid #ffffff12; border-radius: 0; pointer-events: none; }
+.login-brand { gap: 18px; }
+.login-brand img { width: 86px; height: 66px; object-fit: contain; border-radius: 0; }
+.login-brand strong { font-weight: 500; font-size: 17px; }
+.login-brand span { margin-top: 7px; color: #c8c5bc; font-size: 8px; letter-spacing: 2.5px; }
+.login-copy { max-width: 520px; padding: 70px 0; }
+.login-copy .eyebrow { color: #bda780; font-size: 10px; letter-spacing: 3px; }
+.login-copy h1 { font-size: clamp(38px, 4.1vw, 66px); font-weight: 400; line-height: 1.09; letter-spacing: -2px; margin: 24px 0; }
+.login-copy h1 strong { font-weight: 600; }
+.login-copy p { color: #c2c1bc; font-size: 14px; line-height: 1.8; max-width: 350px; }
+.login-highlights { display: grid; gap: 12px; padding-top: 25px; border-top: 1px solid #ffffff24; color: #d3d0c8; font-weight: 400; letter-spacing: .3px; }
+.login-highlights span::before { content: ""; display: inline-block; width: 5px; height: 5px; background: #bda780; margin-right: 12px; vertical-align: middle; }
+.login-panel > small { color: #93928d; }
+.login-access { position: relative; overflow: hidden; padding: 60px 36px; }
+.login-access::before { content: ""; position: absolute; width: 580px; height: 390px; background: url("assets/am-pattern.svg") center / contain no-repeat; opacity: .025; top: -90px; right: -170px; pointer-events: none; }
+.login-card { position: relative; width: min(420px, 100%); padding: 0; background: transparent; border: 0; border-radius: 0; box-shadow: none; backdrop-filter: none; }
+.login-card .eyebrow { font-weight: 500; color: #888478; letter-spacing: 2.4px; }
+.login-card h2 { margin-top: 16px; font-size: 34px; font-weight: 500; letter-spacing: -1.4px; }
+.login-card > p { margin: 10px 0 38px; font-size: 13px; }
+.login-card .field { margin-bottom: 22px; }
+.login-input { min-height: 52px; border-radius: 3px; background: #ffffffa8; }
+.login-input:focus-within { border-color: #ad8a55; box-shadow: 0 0 0 3px #ad8a5510; }
+.login-input input, .login-input input:focus { min-height: 48px; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; outline: none; }
+.login-submit { min-height: 52px; border-radius: 3px; font-weight: 500; box-shadow: none; justify-content: space-between; padding: 0 20px; }
+.login-submit:hover, .primary-btn:hover, .presentation-btn:hover { background: #464747; }
+.demo-access { margin-top: 28px; padding: 18px 0 0; border-radius: 0; border-top: 1px solid var(--line); background: transparent; align-items: start; justify-items: start; gap: 5px; font-size: 11px; }
+.demo-access strong { font-weight: 500; }
+.sidebar { background: #252728; border-color: #363839; color: #f7f6f2; padding: 24px 16px; }
+.brand { height: 72px; border-color: #ffffff18; gap: 12px; }
+.brand-mark { border-radius: 0; background: transparent; box-shadow: none; width: 49px; height: 42px; flex-basis: 49px; }
+.brand-logo img { object-fit: contain; transform: none; }
+.brand-copy strong { font-size: 17px; font-weight: 500; letter-spacing: -.7px; }
+.brand-copy span { color: #c4b18b; font-size: 8px; letter-spacing: 2.5px; margin-top: 6px; }
+.sidebar-toggle { color: #aaa9a3; }
+.nav { padding-top: 28px; gap: 7px; }
+.nav-item { color: #b2b2ac; border-radius: 3px; font-size: 12px; font-weight: 400; min-height: 44px; }
+.nav-item:hover { color: #fff; background: #ffffff09; }
+.nav-item.active { color: #fff; background: #ffffff0e; box-shadow: inset 2px 0 #bda780; }
+.nav-icon { color: #bda780; }
+.sidebar-foot { border-color: #ffffff18; color: #9c9d96; }
+.sidebar-foot strong { font-weight: 400; }
+.sidebar.collapsed .sidebar-toggle { background: #252728; border-color: #494b4c; }
+.topbar { background: #faf9f6f5; }
+.page-heading h1 { font-weight: 500; }
+.page-heading span { font-weight: 500; letter-spacing: 2px; }
+.search, .icon-btn, .avatar, .primary-btn, .presentation-btn, .secondary-btn, .ghost-btn { border-radius: 4px; }
+.primary-btn, .presentation-btn { box-shadow: none; font-weight: 500; }
+.content { padding-top: 32px; }
+.section-head h2 { font-weight: 500; font-size: 22px; }
+.panel-head h3 { font-weight: 500; }
+.kpi-card { box-shadow: none; padding: 20px 18px; }
+.kpi-icon { border-radius: 3px; }
+.kpi-value { font-weight: 500; font-size: 26px; }
+.kpi-card { min-width: 0; }
+.kpi-value { font-size: clamp(18px, 1.5vw, 26px); }
+.panel-head { padding: 20px; }
+.panel-body { padding: 20px; }
+.alert-item, .ranking-item, .timeline-item, .project-card, .metric, .slide-stat { border-radius: 4px; }
+.toast { background: #292b2c; border-radius: 4px; }
+.presentation { background: var(--bg); }
+.slide h2 { font-weight: 500; }
+.mobile-nav { background: #faf9f6; }
+body:has(#appShell[hidden]) .mobile-nav { display: none; }
+@media (min-width: 901px) and (max-width: 1550px) {
+  .kpi-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .kpi-value { font-size: 26px; }
+}
+@media (max-width: 900px) {
+  .login-screen { grid-template-columns: 1fr; }
+  .login-access { background: #faf9f6; padding: 40px 26px; }
+  .login-mobile-brand { margin-bottom: 50px; }
+  .login-mobile-brand img { width: 68px; height: 48px; object-fit: contain; border-radius: 0; }
+  .login-mobile-brand strong { font-weight: 500; }
+  .login-card { padding: 0; }
+}
+@media (max-width: 640px) {
+  .content { padding-top: 24px; }
+  .kpi-card { padding: 15px; }
+  .kpi-value { font-size: 22px; }
+  .mobile-nav .nav-item.active { background: var(--primary-soft); box-shadow: none; }
+}
